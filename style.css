@@ -83,3 +83,32 @@ li{margin:6px 0}
 
 /* ---------- Footer ---------- */
 .site-footer{border-top:1px solid var(--stroke);padding:20px 0;color:var(--muted)}
+/* ---------- Hero small variant ---------- */
+.hero.small{padding:72px 0 32px}
+
+/* ---------- Gallery ---------- */
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+}
+@media (max-width:1000px){.gallery-grid{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:700px){.gallery-grid{grid-template-columns:repeat(2,1fr)}}
+.photo-card{position:relative;overflow:hidden;border-radius:14px;border:1px solid var(--stroke);background:#0e1118}
+.photo-card img{width:100%;height:220px;object-fit:cover;display:block;transition:transform .5s ease}
+.photo-card:hover img{transform:scale(1.04)}
+.photo-cap{position:absolute;left:8px;bottom:8px;background:rgba(0,0,0,.45);backdrop-filter: blur(6px);padding:4px 8px;border-radius:8px;font-size:13px}
+
+/* ---------- Blog ---------- */
+.blog-list{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media (max-width:900px){.blog-list{grid-template-columns:1fr}}
+.blog-card{background:var(--card);border:1px solid var(--stroke);border-radius:16px;padding:16px;box-shadow:0 4px 18px rgba(0,0,0,.2)}
+.blog-card h3{margin:0 0 4px}
+.blog-card .meta{margin-bottom:8px}
+
+/* ---------- Videos ---------- */
+.video-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media (max-width:900px){.video-grid{grid-template-columns:1fr}}
+.video-card{background:var(--card);border:1px solid var(--stroke);border-radius:16px;overflow:hidden}
+.video-card iframe{width:100%;aspect-ratio:16/9;display:block}
+.video-cap{padding:10px 12px;color:var(--muted)}
