@@ -1,23 +1,149 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Jimbo Yu - Personal Website</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <style>
-    body{font-family:Arial,system-ui;margin:0;background:#f5f5f5;color:#111;display:grid;place-items:center;height:100vh}
-    .card{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:28px;box-shadow:0 6px 20px rgba(0,0,0,.06);max-width:720px}
-    h1{margin:0 0 8px;font-size:28px}
-    p{margin:6px 0 0;color:#475569}
-    a.btn{display:inline-block;margin-top:14px;padding:10px 14px;border:1px solid #334155;border-radius:10px;text-decoration:none;color:#111}
-  </style>
+  <meta charset="utf-8" />
+  <title>Jimbo Yu — Personal Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Jimbo Yu — NYU Math & Economics, Data Science minor. Projects, experience, and contact." />
 </head>
 <body>
-  <div class="card">
-    <h1>Hello, I’m Jimbo Yu</h1>
-    <p>NYU · Math & Economics · Data Science minor</p>
-    <p>This site is live on GitHub Pages 🎉</p>
-    <a class="btn" href="mailto:cy2607@nyu.edu">Contact me</a>
-  </div>
+  <header class="site-header">
+    <a class="brand" href="#home">Jimbo Yu</a>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="hero-grid container">
+      <div class="hero-left">
+        <h1>Hi, I’m <span class="accent">Jimbo Yu</span></h1>
+        <p class="subtitle">NYU · Math & Economics · Data Science minor</p>
+        <p class="lead">
+          Interested in economics, data science, and smart mobility. I build clean analyses,
+          tidy spreadsheets, and useful tools — then turn them into clear narratives.
+        </p>
+        <div class="cta">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn outline" href="mailto:cy2607@nyu.edu">Email Me</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <img class="avatar" alt="avatar"
+             src="https://avatars.githubusercontent.com/u/9919?v=4" />
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section container">
+    <h2>About</h2>
+    <p>
+      I’m a junior at NYU (Math & Economics, Data Science minor). My current work combines
+      micro/macro modeling with practical data pipelines. Recently: DURF proposal on U.S.
+      housing market buyer–seller divergence; research on automotive MCU supply chains;
+      and content analytics for creator turnarounds.
+    </p>
+    <div class="chips">
+      <span class="chip">Python</span>
+      <span class="chip">Pandas</span>
+      <span class="chip">Stata</span>
+      <span class="chip">SQL</span>
+      <span class="chip">Excel</span>
+      <span class="chip">PowerPoint</span>
+      <span class="chip">React (basic)</span>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section container">
+    <h2>Projects</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>DURF: U.S. Housing Market Imbalance</h3>
+        <p>Integrate MLS, Zillow & macro series to study buyer–seller divergence since 2024.
+           Methods: clustering, time-series, and causal notes.</p>
+        <div class="tags"><span>Python</span><span>FRED</span><span>Pandas</span></div>
+        <a class="card-link" href="#" target="_blank" rel="noreferrer">Open</a>
+      </article>
+
+      <article class="card">
+        <h3>Automotive MCU Landscape</h3>
+        <p>Vendor/architecture mapping (NXP, Renesas, TI, Infineon) across domain/zonal EEAs;
+           domain chip counts and BOM ranges.</p>
+        <div class="tags"><span>Research</span><span>Excel</span><span>Automotive</span></div>
+        <a class="card-link" href="#" target="_blank" rel="noreferrer">Open</a>
+      </article>
+
+      <article class="card">
+        <h3>YouTube Turnaround Case</h3>
+        <p>Content taxonomy, retention curve analysis, and title/thumbnail A/B notes with a
+           lightweight dashboard.</p>
+        <div class="tags"><span>Analytics</span><span>A/B</span><span>Dashboard</span></div>
+        <a class="card-link" href="#" target="_blank" rel="noreferrer">Open</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="section container">
+    <h2>Experience</h2>
+    <ol class="timeline">
+      <li>
+        <div class="tl-head">
+          <strong>Research Assistant — DURF Team</strong>
+          <span class="muted">NYU · Jun 2024 – Present</span>
+        </div>
+        <ul class="bullets">
+          <li>Built pipelines for MLS + macro datasets; reproducible notebooks.</li>
+          <li>Designed visuals/tables; organized weekly mentor syncs.</li>
+        </ul>
+      </li>
+      <li>
+        <div class="tl-head">
+          <strong>Consulting Intern</strong>
+          <span class="muted">CIC, Shanghai · Summer 2024</span>
+        </div>
+        <ul class="bullets">
+          <li>Prepared IPO slides; compiled MCU market tables and visuals.</li>
+          <li>Interviewed experts; summarized transcripts into decision decks.</li>
+        </ul>
+      </li>
+    </ol>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section container">
+    <h2>Contact</h2>
+    <div class="contact">
+      <a class="btn" href="mailto:cy2607@nyu.edu">cy2607@nyu.edu</a>
+      <a class="btn outline" href="https://www.linkedin.com/in/" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a class="btn outline" href="https://github.com/JimboYu050504" target="_blank" rel="noreferrer">GitHub</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Jimbo Yu. Built with HTML & CSS. Deployed on GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <script>
+    // small nicety
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // smooth scroll for in-page links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        const id=a.getAttribute('href').slice(1);
+        const el=document.getElementById(id);
+        if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth'}); }
+      });
+    });
+  </script>
 </body>
 </html>
