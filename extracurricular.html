@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Extracurricular Life — Jimbo Yu</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Photos, blog, and videos from Jimbo Yu's extracurricular life." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <div class="brand">Jimbo Yu</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="#photos">Photos</a>
+        <a href="#blog">Blog</a>
+        <a href="#videos">Videos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero small">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>My Extracurricular Life</h1>
+          <p class="subtitle">Clubs, travels, vlogs, and moments I enjoy outside the classroom.</p>
+          <a class="btn" href="#photos">Start exploring</a>
+        </div>
+      </div>
+      <div class="hero-bg"></div>
+    </section>
+
+    <section id="photos" class="section">
+      <div class="container">
+        <h2>Photos</h2>
+        <p class="muted">Add your images to <code>assets/photos/</code> and list them in <code>data/gallery.json</code>.</p>
+        <div id="photo-grid" class="gallery-grid"></div>
+      </div>
+    </section>
+
+    <section id="blog" class="section">
+      <div class="container">
+        <h2>Blog</h2>
+        <p class="muted">Edit <code>data/posts.json</code> to publish updates.</p>
+        <div id="blog-list" class="blog-list"></div>
+      </div>
+    </section>
+
+    <section id="videos" class="section">
+      <div class="container">
+        <h2>Videos</h2>
+        <p class="muted">Add YouTube/Vimeo links in <code>data/videos.json</code>.</p>
+        <div id="video-grid" class="video-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Jimbo Yu. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="extras.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
