@@ -112,3 +112,66 @@ li{margin:6px 0}
 .video-card{background:var(--card);border:1px solid var(--stroke);border-radius:16px;overflow:hidden}
 .video-card iframe{width:100%;aspect-ratio:16/9;display:block}
 .video-cap{padding:10px 12px;color:var(--muted)}
+/* Layout polish */
+.section h2 { font-size: 2rem; margin-bottom: 1.25rem; }
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+/* Card glow + hover lift */
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 1px 10px rgba(0,0,0,0.25);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255,255,255,0.18);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.35);
+}
+
+.card-head { display:flex; justify-content:space-between; align-items:baseline; gap: 1rem; }
+.card-head h3 { margin:0; font-size:1.1rem; }
+.meta {
+  font-size: .9rem;
+  opacity: .8;
+  padding: .15rem .5rem;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 999px;
+}
+
+/* Action bar */
+.actions { display:flex; gap:.5rem; margin-top:.75rem; flex-wrap:wrap; }
+
+.btn {
+  display:inline-flex; align-items:center; gap:.4rem;
+  padding:.5rem .7rem; border-radius:10px; font-size:.95rem;
+  text-decoration:none; cursor:pointer; border:0;
+  transition: background .15s ease, transform .12s ease;
+}
+.btn.ghost {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+.btn.ghost:hover { background: rgba(255,255,255,0.12); }
+.btn:active { transform: translateY(1px); }
+
+.ico { width:1rem; height:1rem; fill: currentColor; }
+
+/* Like on */
+.btn.like[aria-pressed="true"] .ico { fill: #ff4d6d; }
+.btn.like[aria-pressed="true"] { background: rgba(255,77,109,.12); border-color: rgba(255,77,109,.35); }
+
+/* Toast */
+#toast {
+  position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%) translateY(20px);
+  background: rgba(20,20,20,.9); color:#fff; padding:.6rem .9rem; border-radius:10px;
+  border:1px solid rgba(255,255,255,.16); font-size:.95rem; opacity:0; pointer-events:none;
+  transition: opacity .2s ease, transform .2s ease;
+}
+#toast.show { opacity:1; transform: translateX(-50%) translateY(0); }
