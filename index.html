@@ -265,5 +265,41 @@
       });
     });
   </script>
+  <script>
+  // Copy link buttons
+  document.querySelectorAll('.copy-link').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const url = btn.getAttribute('data-link');
+      try {
+        await navigator.clipboard.writeText(url);
+        showToast('Link copied');
+        btn.innerHTML = '<svg class="ico"><use href="#icon-check"/></svg> Copied';
+        setTimeout(() => btn.innerHTML = '<svg class="ico"><use href="#icon-link"/></svg> Copy', 1200);
+      } catch {
+        showToast('Copy failed');
+      }
+    });
+  });
+
+  // Like buttons
+  document.querySelectorAll('.like').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const pressed = btn.getAttribute('aria-pressed') === 'true';
+      btn.setAttribute('aria-pressed', String(!pressed));
+      const countEl = btn.querySelector('.like-count');
+      let n = parseInt(countEl.textContent || '0', 10);
+      countEl.textContent = pressed ? Math.max(0, n - 1) : n + 1;
+    });
+  });
+
+  // Toast helper
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 1100);
+  }
+</script>
+
 </body>
 </html>
