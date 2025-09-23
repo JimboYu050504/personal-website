@@ -148,24 +148,32 @@ li{margin:6px 0}
 /* Action bar */
 .actions { display:flex; gap:.5rem; margin-top:.75rem; flex-wrap:wrap; }
 
+/* Base button */
 .btn {
   display:inline-flex; align-items:center; gap:.4rem;
-  padding:.5rem .7rem; border-radius:10px; font-size:.95rem;
-  text-decoration:none; cursor:pointer; border:0;
-  transition: background .15s ease, transform .12s ease;
+  padding:.45rem .8rem; border-radius:8px; font-size:.9rem;
+  text-decoration:none; cursor:pointer; border:0; font-weight:500;
+  transition: background .15s ease, transform .12s ease, color .15s ease;
+  color: #fff;
 }
-.btn.ghost {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.12);
-}
-.btn.ghost:hover { background: rgba(255,255,255,0.12); }
 .btn:active { transform: translateY(1px); }
-
 .ico { width:1rem; height:1rem; fill: currentColor; }
 
-/* Like on */
-.btn.like[aria-pressed="true"] .ico { fill: #ff4d6d; }
-.btn.like[aria-pressed="true"] { background: rgba(255,77,109,.12); border-color: rgba(255,77,109,.35); }
+/* Themed buttons */
+.btn.pdf { background:#2563eb; }              /* Blue */
+.btn.pdf:hover { background:#1d4ed8; }
+
+.btn.copy { background:#059669; }             /* Green */
+.btn.copy:hover { background:#047857; }
+
+.btn.like { background:#e11d48; }             /* Red */
+.btn.like:hover { background:#be123c; }
+
+/* Like pressed */
+.btn.like[aria-pressed="true"] {
+  background:#be123c; color:#fff;
+}
+
 
 /* Toast */
 #toast {
