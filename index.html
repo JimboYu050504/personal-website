@@ -300,6 +300,18 @@
     setTimeout(() => t.classList.remove('show'), 1100);
   }
 </script>
+<div class="brain-box">
+  <h3>🧠 Brain Teaser of the Day</h3>
+  <p id="teaser">What has to be broken before you can use it?</p>
+  <button onclick="showAnswer()">Show Answer</button>
+  <p id="answer" style="display:none;">An egg 🥚</p>
+</div>
+
+<script>
+  function showAnswer() {
+    document.getElementById("answer").style.display = "block";
+  }
+</script>
 
 </body>
 </html>
